@@ -1,0 +1,92 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Project files
+*.html
+data/01-Nightflights.xlsx
+
+data/02-Nightflights.ods
+*.Rhistory
+.Rproj.user
+TopicModelling/outputs/topic-model.gensim
+TopicModelling/outputs/topic-model.gensim.state
+TopicModelling/outputs/topic-model.gensim.expElogbeta.npy
+TopicModelling/outputs/topic-model.gensim.id2word
+*.feather
+
+
+
+data/export\.csv
+
+data/fake\.csv
+
+data/ldavis\.json
+
+data/counts-sentiment-bigrams\.RData
+
+data/r-topic-model-10-topics\.rds
+
+data/responses-tidy\.rds
+
+data/words-tidy\.rds
+
+data/bigrams\.RData
+
+data/word-counts\.RData
+
+data/sentiment-scores\.RData
+
+*.history
+
+data/topic-model-beta\.rds
+
+data/topic-model-gamma\.rds
+
+data/topic-model-most-relevant-words\.rds
+
+\.RData
