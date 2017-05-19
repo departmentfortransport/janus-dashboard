@@ -21,7 +21,7 @@ The repository contains
 ## Data format
 The data file needs to go in the data folder as a csv file with a headings that include "uuid" and "text", which include unique keys and the text data. Look at generic-data.csv for an example and then overwrite this file.
 
-The example data provided was traken from a [Kaggle fake news dataset](https://www.kaggle.com/mrisdal/fake-news).
+The example data provided was taken from a [Kaggle fake news dataset](https://www.kaggle.com/mrisdal/fake-news).
 
 ## Modelling
 The first step before running the dashboard is to run 00-build.R. This will extract word counts, sentiment and topic models for use in the dashboard.
