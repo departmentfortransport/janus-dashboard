@@ -1,5 +1,15 @@
 ![](screenshot.PNG)
 
+Janus is a tool to analyse text data and includes
+
+* word analysis
+* word relationship analysis
+* sentiment analysis
+* topic modelling
+* named entity extraction (coming soon)
+
+A [demo of the dashboard](https://dft-pma.shinyapps.io/janus-example/) with [dummy data](https://www.kaggle.com/mrisdal/fake-news) to explore can be be found [here](https://dft-pma.shinyapps.io/janus-example/) (slow free hosting).
+
 # Getting started
 
 The repository contains 
