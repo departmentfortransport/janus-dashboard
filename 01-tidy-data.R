@@ -13,14 +13,14 @@ responses_tidy <- read_csv("data/generic-data.csv") %>%
   rename_("col1" = col1_label,
           "col2" = col2_label,
           "col3" = col3_label) %>%
-  mutate(uuid = as.character(uuid))
+  mutate_all(as.character)
 
 saveRDS(responses_tidy, "data/responses-tidy.rds")
 
 # Load stop words and add user defined ones
 data("stop_words")
-if(exists("extra_stop_words")){
-  if(length(extra_stop_words) > 0) {
+if (exists("extra_stop_words")){
+  if (length(extra_stop_words) > 0) {
     x <- data.frame(word = extra_stop_words, lexicon = "extra")
     stop_words <- rbind(stop_words, x)
   }
