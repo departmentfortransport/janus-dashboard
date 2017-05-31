@@ -35,9 +35,11 @@ shinyUI(
         tabItems(
           # First tab content
           tabItem(tabName = "tab_explorer",
+                  column( width = 12, offset = 0.5, 
+                          h2("Table Filter"), 
                   # Nadeem is doing
                   fluidRow(
-                  wellPanel(
+                  wellPanel( h4("Filter the table by the categories in each column"), 
 
                       if ( length(unique(df_responses_tidy$col1)) < 5 ){
                       checkboxGroupInput("filter_col1",
@@ -73,17 +75,17 @@ shinyUI(
                       #                               "Negative"),
                       #                   selected = c("Positive",
                       #                                "Negative")),
-                      numericInput("filter_min_words",
-                                   label = "Minimum number of words",
-                                   value = 0),
-                      numericInput("filter_max_words",
-                                   label = "Maximum number of words",
-                                   value = 1000),
+                      # numericInput("filter_min_words",
+                      #              label = "Minimum number of words",
+                      #              value = 0),
+                      # numericInput("filter_max_words",
+                      #              label = "Maximum number of words",
+                      #              value = 1000),
                     
                   
                       actionButton("filter_go", "Go")
                     
-                  ),
+                  )),
                   column(12,
                   dataTableOutput("responses_tidy"))
           )),
