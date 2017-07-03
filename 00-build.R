@@ -21,3 +21,5 @@ source("02-word-counts.R")
 source("03-bigrams.R")
 source("04-generate-topic-model.R")
 source("05-sentiment.R")
+# If data is needed in MongoDB
+# source("06-save-to-mongodb.R")
