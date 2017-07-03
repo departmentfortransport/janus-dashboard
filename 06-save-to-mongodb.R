@@ -50,3 +50,15 @@ for (df in data_frames) {
   )
 }
 
+# -----------------------------------------------------------------------------------------------------
+# Topic model data
+m <- mongo(collection = 'topic_model_lda_vis_data',
+           db = 'janus',
+           url = Sys.getenv('MONGO_URI'))
+try( # Drop the collection if it exists already
+  m$drop(), 
+  silent = TRUE
+)
+m$import(file('data/r-topic-model.json'))
+
+

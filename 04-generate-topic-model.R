@@ -89,6 +89,16 @@ create_topic_model <- function(){
   
   cat(ldavis_json, file = "data/ldavis.json")
   
+  # -----------------------------------------------------
+  # Save the ldavis_json parameters for use in Python
+  phi <- exp(topic_model@beta)
+  theta <- topic_model@gamma
+  doc.length <- words_per_doc$length
+  vocab <- topic_model@terms
+  term.frequency <- word_frequencies$freq
+  lda_data = list(phi = phi, theta = theta, doc.length = doc.length, vocab = vocab, term.frequency = term.frequency)
+  jsonlite::write_json(lda_data, 'data/r-topic-model.json')
+  # ----------------------------------------------------------------------------------------------------
   # Save tidy model output ordered the same as the LDA vis ---------------------------------------------
   # reorder r topic model to match JSON
   topic_lookup_json <- data.frame(original_topic = RJSONIO::fromJSON("data/ldavis.json")$topic.order) %>%
